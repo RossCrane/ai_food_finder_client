@@ -13,6 +13,7 @@ export const getOptions = async (
 			`https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/user/preferences?clerkUserId=${clerkUserId}`,
 			{
 				method: 'GET',
+				mode: 'cors',
 				headers: {
 					'Content-Type': 'application/json',
 					// Include authentication headers if necessary
@@ -34,6 +35,7 @@ export const getOptions = async (
 
 	const options = {
 		method: 'POST',
+		mode: 'cors',
 		body: JSON.stringify({ message: prompt }),
 		headers: { 'Content-Type': 'application/json' },
 	};
@@ -54,6 +56,7 @@ export const getOptions = async (
 export const getDetailedRecipe = async (recipeTitle) => {
 	const options = {
 		method: 'POST',
+		mode: 'cors',
 		body: JSON.stringify({
 			message: `Can you give me more details for ${recipeTitle}?`,
 		}),
@@ -89,6 +92,7 @@ export const getGoOutOptions = async (
 			`https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/user/preferences?clerkUserId=${clerkUserId}`,
 			{
 				method: 'GET',
+				mode: 'cors',
 				headers: {
 					'Content-Type': 'application/json',
 					// Include authentication headers if necessary
@@ -112,6 +116,7 @@ export const getGoOutOptions = async (
 
 	const options = {
 		method: 'POST',
+		mode: 'cors',
 		body: JSON.stringify({ message: prompt }),
 		headers: {
 			'Content-Type': 'application/json',
@@ -142,6 +147,7 @@ export const submitUserPreferences = async (
 			'https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/user/preferences',
 			{
 				method: 'POST',
+				mode: 'cors',
 				headers: {
 					'Content-Type': 'application/json',
 				},
