@@ -1,0 +1,73 @@
+.profile-container {
+	display: flex;
+	flex-wrap: wrap; /* Allow items to wrap onto the next line */
+	gap: 10px;
+	scrollbar-width: thick;
+	scrollbar-color: red;
+}
+
+textarea::-webkit-scrollbar {
+	border-radius: 5px;
+	background-color: transparent;
+}
+textarea::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: grey;
+}
+textarea {
+	overflow: auto;
+	resize: none;
+	text-align: center;
+}
+
+.form-input {
+	flex: 1;
+	border: none;
+	border-radius: 15px;
+	background-color: #2b4f68;
+	color: #fff;
+	font-size: 20px; /* Adjust font size to make text larger */
+	padding: 20px 40px; /* Adjust padding to increase vertical size */
+	margin: 10px 0;
+	white-space: normal; /* Allow text to wrap to the next line */
+	height: 10vh; /* Allow the button to expand vertically based on content */
+	overflow: auto; /* Enable vertical scrollbar if needed */
+	scrollbar-color: red;
+}
+
+.form-input:hover {
+	background-color: #083c57;
+}
+
+.submit-button-container {
+	display: flex;
+	flex-wrap: wrap; /* Allow items to wrap onto the next line */
+	gap: 10px;
+}
+
+.submit-button {
+	border: none;
+	border-radius: 15px;
+	background-color: #2b4f68;
+	color: #fff;
+	font-size: 28px;
+	padding: 20px 40px; /* Adjust padding to control vertical size */
+	margin: 20px 0; /* Add margin for spacing */
+	width: 99vw;
+}
+
+.submit-button:hover {
+	background-color: #083c57;
+}
+
+@media (max-width: 600px) {
+	.form-input-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form-input {
+		width: 80vw;
+		max-width: 100%; /* Ensure the input doesn't exceed the screen width */
+	}
+}

@@ -1,0 +1,48 @@
+h2 {
+	text-align: center;
+	font-size: 16px;
+	margin: 0;
+}
+
+.accordion {
+	max-width: 98vw;
+	margin: 2rem auto;
+}
+
+.accordion-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	background-color: #2b4f68;
+	min-height: 8vh;
+	margin-bottom: 11px;
+	align-items: center;
+}
+
+.accordion-title:hover {
+	background-color: #083c57;
+}
+
+.accordion-title,
+.accordion-content {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.accordion-content {
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 12px;
+	}
+
+	.accordion {
+		width: 100%;
+	}
+}

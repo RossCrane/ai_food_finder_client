@@ -1,0 +1,20 @@
+.submit-button-container {
+	display: flex;
+	flex-wrap: wrap; /* Allow items to wrap onto the next line */
+	gap: 10px;
+}
+
+.submit-button {
+	border: none;
+	border-radius: 15px;
+	background-color: #2b4f68;
+	color: #fff;
+	font-size: 28px;
+	padding: 20px 40px; /* Adjust padding to control vertical size */
+	margin: 20px 0; /* Add margin for spacing */
+	width: 99vw;
+}
+
+.submit-button:hover {
+	background-color: #083c57;
+}

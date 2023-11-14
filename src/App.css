@@ -1,0 +1,63 @@
+#root {
+}
+
+.main-button {
+	border: none;
+	border-radius: 15px;
+	background-color: #2b4f68;
+	color: #fff;
+	cursor: pointer;
+	font-size: 24px;
+	padding: 20px 30px; /* Adjust padding to control button size */
+	margin-left: 5px; /* Adjust left margin to control space between buttons */
+	margin-right: 5px; /* Adjust right margin to control space between buttons */
+	width: 45vw; /* Adjust width to control button size */
+}
+
+.main-button:hover {
+	background-color: #083c57;
+}
+
+.main-link {
+}
+
+.main-buttons {
+	display: flex;
+	justify-content: space-between;
+	flex: 1; /* Ensure buttons take up available space horizontally */
+	gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.main-buttons > button {
+	height: 100%; /* Make the buttons fill the height of the container */
+	flex: 1; /* Make the buttons expand to fill available space */
+	border: none;
+	border-radius: 15px;
+	background-color: #2b4f68;
+	color: #fff;
+	cursor: pointer;
+	font-size: 24px; /* Adjust the font size as needed for larger buttons */
+	padding: 50px 60px; /* Adjust padding to make buttons larger */
+	margin-top: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.main-buttons > button:hover {
+	background-color: #083c57; /* Change to the hover background color */
+}
+
+@media (max-width: 600px) {
+	.main-buttons {
+		flex-direction: column;
+		align-items: center;
+		margin: 20px 0;
+	}
+
+	.main-buttons > button {
+		font-size: 24px; /* Adjust font size for smaller screens */
+		padding: 10px; /* Adjust padding for smaller screens */
+		width: calc(100% - 20px); /* Calculate the width with padding */
+		margin: 10px 0; /* Add margin for spacing */
+	}
+}
