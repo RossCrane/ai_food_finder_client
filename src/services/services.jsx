@@ -10,7 +10,7 @@ export const getOptions = async (
 
 	try {
 		const userPrefsResponse = await fetch(
-			`http://localhost:5000/user/preferences?clerkUserId=${clerkUserId}`,
+			`https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/user/preferences?clerkUserId=${clerkUserId}`,
 			{
 				method: 'GET',
 				headers: {
@@ -39,7 +39,10 @@ export const getOptions = async (
 	};
 
 	try {
-		const response = await fetch('http://localhost:5000/completions', options);
+		const response = await fetch(
+			'https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/completions',
+			options
+		);
 		const data = await response.json();
 		// console.log(data);
 		return data;
@@ -59,7 +62,10 @@ export const getDetailedRecipe = async (recipeTitle) => {
 		},
 	};
 	try {
-		const response = await fetch('http://localhost:5000/completions', options);
+		const response = await fetch(
+			'https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/completions',
+			options
+		);
 		const data = await response.json();
 		// console.log(data);
 		return data;
@@ -80,7 +86,7 @@ export const getGoOutOptions = async (
 
 	try {
 		const userPrefsResponse = await fetch(
-			`http://localhost:5000/user/preferences?clerkUserId=${clerkUserId}`,
+			`https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/user/preferences?clerkUserId=${clerkUserId}`,
 			{
 				method: 'GET',
 				headers: {
@@ -113,7 +119,10 @@ export const getGoOutOptions = async (
 	};
 
 	try {
-		const response = await fetch('http://localhost:5000/completions', options);
+		const response = await fetch(
+			'https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/completions',
+			options
+		);
 		const data = await response.json();
 		// console.log(data);
 		return data;
@@ -129,19 +138,22 @@ export const submitUserPreferences = async (
 	diets
 ) => {
 	try {
-		const response = await fetch('http://localhost:5000/user/preferences', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			credentials: 'include',
-			body: JSON.stringify({
-				clerkUserId,
-				emailAddress: primaryEmailAddress,
-				allergies,
-				diets,
-			}),
-		});
+		const response = await fetch(
+			'https://ai-food-finder-server-c8f14bc4c3e5.herokuapp.com/user/preferences',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				credentials: 'include',
+				body: JSON.stringify({
+					clerkUserId,
+					emailAddress: primaryEmailAddress,
+					allergies,
+					diets,
+				}),
+			}
+		);
 
 		if (response.ok) {
 			return await response.json();
