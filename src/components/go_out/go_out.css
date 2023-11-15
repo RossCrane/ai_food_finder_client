@@ -18,3 +18,12 @@
 .submit-button:hover {
 	background-color: #083c57;
 }
+
+.country-city-state-dropdown-options {
+	background-color: transparent;
+	color: #083c57;
+	/* font-size: 28px;
+	padding: 20px 40px; Adjust padding to control vertical size
+	margin: 20px 0;  Add margin for spacing
+	width: 99vw; */
+}

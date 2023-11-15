@@ -72,12 +72,15 @@ const GoOut = () => {
 		<form onSubmit={handleSubmit}>
 			<h2>Country</h2>
 			<CountrySelect
+				containerClassName="country-city-state-dropdown-options"
+				className="country-select"
 				value={formState.countryid}
 				onChange={(e) => handleFormStateChange(e, 'countryid', 'countryName')}
 				placeHolder="Select Country"
 			/>
 			<h2>State</h2>
 			<StateSelect
+				containerClassName="country-city-state-dropdown-options"
 				countryid={formState.countryid}
 				value={formState.stateid}
 				onChange={(e) => handleFormStateChange(e, 'stateid', 'stateName')}
@@ -85,6 +88,7 @@ const GoOut = () => {
 			/>
 			<h2>City</h2>
 			<CitySelect
+				containerClassName="country-city-state-dropdown-options"
 				countryid={formState.countryid}
 				stateid={formState.stateid}
 				value={formState.cityid}
