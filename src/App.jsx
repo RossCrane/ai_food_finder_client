@@ -43,15 +43,11 @@ function ClerkProviderWithRoutes() {
 				<Route path="/" element={<PublicPage />} />
 				<Route
 					path="/sign-in/*"
-					element={
-						<SignIn routing="path" path="/sign-in" redirectUrl="/protected" />
-					}
+					element={<SignIn routing="path" path="/sign-in" redirectUrl="/" />}
 				/>
 				<Route
 					path="/sign-up/*"
-					element={
-						<SignUp routing="path" path="/sign-up" redirectUrl="/protected" />
-					}
+					element={<SignUp routing="path" path="/sign-up" redirectUrl="/" />}
 				/>
 				<Route
 					path="/protected"
