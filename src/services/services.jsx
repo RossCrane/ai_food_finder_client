@@ -28,7 +28,10 @@ export const getOptions = async (
 				: '';
 		}
 	} catch (error) {
-		console.error('Error fetching user preferences:', error);
+		console.error(
+			'Error in getoptions, userprefs response, Error fetching user preferences:',
+			error
+		);
 	}
 
 	const prompt = `I am hungry and looking to cook. I have ${ingredients} on hand.${cravingText}${notWantText}${diets}${allergies}. Please provide me with five options and no additional text before or after. I understand that your data can be out of date, just give me the best options you can.`;
@@ -49,7 +52,7 @@ export const getOptions = async (
 		// console.log(data);
 		return data;
 	} catch (error) {
-		console.error('Error:', error);
+		console.error('Error in getoptions:', error);
 	}
 };
 
@@ -73,7 +76,7 @@ export const getDetailedRecipe = async (recipeTitle) => {
 		// console.log(data);
 		return data;
 	} catch (error) {
-		console.error(error);
+		console.error('error in get details.', error);
 	}
 };
 
@@ -107,7 +110,7 @@ export const getGoOutOptions = async (
 				: '';
 		}
 	} catch (error) {
-		console.error('Error fetching user preferences:', error);
+		console.error('Error fetching user preferences in gooutoptions:', error);
 	}
 
 	const prompt = `I am hungry and looking to go out to a restaurant. My location is ${countryName}, ${stateName}, ${cityName}.${cravingText}${notWantText}${diets}${allergies} Please provide me with five options and remove the preface text before the five options. I understand that your data can be out of date, just give me the best options you can.`;
@@ -132,7 +135,7 @@ export const getGoOutOptions = async (
 		// console.log(data);
 		return data;
 	} catch (error) {
-		console.log(error);
+		console.log('error in go out options', error);
 	}
 };
 
@@ -164,10 +167,12 @@ export const submitUserPreferences = async (
 		if (response.ok) {
 			return await response.json();
 		} else {
-			throw new Error(`HTTP Error: ${response.statusText}`);
+			throw new Error(
+				`Error in submit user prefrences, HTTP Error: ${response.statusText}`
+			);
 		}
 	} catch (error) {
-		console.error('Error:', error);
+		console.error('Error in submit user prefrences, Error:', error);
 		throw error;
 	}
 };

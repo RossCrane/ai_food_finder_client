@@ -123,20 +123,6 @@ function ClerkProviderWithRoutes() {
 						</>
 					}
 				/>
-				<Route
-					path="/recipe"
-					element={
-						<>
-							<SignedIn>
-								<Header></Header>
-								<Cook />
-							</SignedIn>
-							<SignedOut>
-								<RedirectToSignIn />
-							</SignedOut>
-						</>
-					}
-				/>
 			</Routes>
 		</ClerkProvider>
 	);
